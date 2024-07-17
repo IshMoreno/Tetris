@@ -1,6 +1,6 @@
 ﻿namespace Tetris
 {/// <summary>
-/// This class <see cref="GameGrid Grid"/> holds a two dimensional game grid, the rows and columns. 
+/// This class <see cref="GameGrid Grid"/> holds a two dimensional game grid array, the rows and columns. 
 /// </summary>
     public class GameGrid
     {
@@ -16,7 +16,7 @@
         }
 
         /// <summary>
-        /// The constructor will take the number of rows and columns as parameters and intialize the array.
+        /// The constructor will take the number of rows and columns as parameters and initialize the array.
         /// </summary>
         /// <param name="rows">This represents the rows of the gird.</param>
         /// <param name="columns">This represents the columns of the grid.</param>
@@ -31,7 +31,7 @@
         /// This method checks if the given row or column is inside the grid or not.
         /// </summary>
         /// <param name="r">The row must be greater or equal to 0 and less than the number of rows.</param>
-        /// <param name="c">The columns must be greater or equal to 0 and less than the number of columns.</param>
+        /// <param name="c">The column must be greater or equal to 0 and less than the number of columns.</param>
         /// <returns>
         /// Returns value greater than zero if object is inside the grid.
         /// </returns>
