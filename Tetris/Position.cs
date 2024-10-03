@@ -5,6 +5,9 @@
     /// </summary>
     public class Position
     {
+        /// <summary>
+        /// This class stores a row and column.
+        /// </summary>
         public int Row { get; set; }
         public int Column { get; set; }
 
