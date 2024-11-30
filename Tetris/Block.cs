@@ -8,10 +8,14 @@ namespace Tetris
     public abstract class Block
     {
         /// <summary>
-        /// Subclasses which contain the tile position and the four rotation states.
+        /// Subclasses
         /// </summary>
+
+        //Tile position and the four rotation states.
         protected abstract Position[][] Tiles { get; }
+        //Offset which decides where the block spawns.
         protected abstract Position StartOffset { get; }
+        //ID to distinguish the blocks.
         public abstract int Id { get; }
 
         private int rotationState;
