@@ -36,7 +36,7 @@ namespace Tetris
         /// <returns>
         /// This returns the grid position occupied by the current block.
         /// </returns>
-        public IEnumerable<Position> TilePosition()
+        public IEnumerable<Position> TilePositions()
         {
             foreach (Position p in Tiles[rotationState])
             {
