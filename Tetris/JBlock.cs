@@ -1,7 +1,7 @@
 ﻿namespace Tetris
 {
     /// <summary>
-    /// This class stores the four position for the <see cref="Block"/> class.
+    /// This class stores the four positions for the <see cref="JBlock"/> class.
     /// </summary>
     public class JBlock : Block
     {
