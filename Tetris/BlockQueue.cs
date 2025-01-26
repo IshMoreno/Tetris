@@ -28,6 +28,9 @@ namespace Tetris
         /// </summary>
         public Block NextBlock {  get; private set; }
 
+        /// <summary>
+        /// Method to queue the next random block.
+        /// </summary>
         public BlockQueue()
         {
             NextBlock = RandomBlock();
@@ -43,7 +46,7 @@ namespace Tetris
         }
 
         /// <summary>
-        /// Method to update the property.
+        /// Method to return the next block and update the property.
         /// </summary>
         /// <returns>Returns the next block.</returns>
         public Block GetAndUpdate()

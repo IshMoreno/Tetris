@@ -16,8 +16,10 @@ namespace Tetris
     /// </summary>
     public partial class MainWindow : Window
     {
-
-        private readonly ImageSource[] titleImages = new ImageSource[]
+        /// <summary>
+        /// Array containing the tile's images.
+        /// </summary>
+        private readonly ImageSource[] tileImages = new ImageSource[]
         {
             new BitmapImage(new Uri("Assets/TileEmpty.png", UriKind.Relative)),
             new BitmapImage(new Uri("Assets/TileCyan.png", UriKind.Relative)),
@@ -29,6 +31,9 @@ namespace Tetris
             new BitmapImage(new Uri("Assets/TileRed.png", UriKind.Relative)),
         };
 
+        /// <summary>
+        /// Array containing the block's images.
+        /// </summary>
         private readonly ImageSource[] blockImages = new ImageSource[]
         {
             new BitmapImage(new Uri("Assets/Block-Empty.png", UriKind.Relative)),
@@ -41,11 +46,17 @@ namespace Tetris
             new BitmapImage(new Uri("Assets/Block-Z.png", UriKind.Relative)),
         };
 
+        /// <summary>
+        /// Two-dimensional array of image controls.
+        /// </summary>
         private readonly Image[,] imageControls;
         private readonly int maxDelay = 1000;
         private readonly int minDelay = 75;
         private readonly int delayDecrease = 25;
 
+        /// <summary>
+        /// GameState object.
+        /// </summary>
         private GameState gameState = new GameState();
 
         /// <summary>
@@ -87,6 +98,10 @@ namespace Tetris
             return imageControls;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="grid"></param>
         private void DrawGrid(GameGrid grid)
         {
             for (int r = 0; r < grid.Rows; r++)

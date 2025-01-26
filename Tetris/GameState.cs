@@ -31,7 +31,7 @@
         }
 
         /// <summary>
-        /// Properties
+        /// Properties for the game grid, block queue, and game over bool, the score, held-block, and can-hold.
         /// </summary>
         public GameGrid GameGrid { get; }
         public BlockQueue BlockQueue { get; }
@@ -69,6 +69,9 @@
             return true;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void HoldBlock()
         {
             if (!CanHold)
@@ -192,6 +195,11 @@
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         private int TileDropDistance(Position p)
         {
             int drop = 0;
@@ -204,6 +212,10 @@
             return drop;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public int BlockDropDistance()
         {
             int drop = GameGrid.Rows;
@@ -215,7 +227,9 @@
 
             return drop;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void DropBlock()
         {
             CurrentBlock.Move(BlockDropDistance(), 0);

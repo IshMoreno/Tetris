@@ -12,7 +12,7 @@
         public int Column { get; set; }
 
         /// <summary>
-        /// This represents the position of the block on the grid.
+        /// This constructor represents the position of the <see cref="Block"/> on the grid.
         /// </summary>
         /// <param name="row">This represents the rows of the gird.</param>
         /// <param name="column">This represents the columns of the grid.</param>
