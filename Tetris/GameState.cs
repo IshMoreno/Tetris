@@ -70,7 +70,7 @@
         }
 
         /// <summary>
-        /// 
+        /// Method to keep a block in hold position.
         /// </summary>
         public void HoldBlock()
         {
@@ -196,10 +196,8 @@
         }
 
         /// <summary>
-        /// 
+        /// Helper method that takes the position and returns the number of empty cells below it.
         /// </summary>
-        /// <param name="p"></param>
-        /// <returns></returns>
         private int TileDropDistance(Position p)
         {
             int drop = 0;
@@ -213,7 +211,7 @@
         }
 
         /// <summary>
-        /// 
+        /// Method that calls the <see cref="TileDropDistance(Position)"/> method and takes the number of cells to move down.
         /// </summary>
         /// <returns></returns>
         public int BlockDropDistance()
@@ -228,7 +226,7 @@
             return drop;
         }
         /// <summary>
-        /// 
+        /// Method to move the block all the way down and places it in the grid.
         /// </summary>
         public void DropBlock()
         {

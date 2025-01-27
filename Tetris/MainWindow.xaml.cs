@@ -76,8 +76,9 @@ namespace Tetris
         private Image[,] SetupGameCanvas(GameState grid)
         {
             Image[] imageControls = new Image[grid.Rows, grid.Columns];
-            int cellSize = 25;
+            int cellSize = 25; // Variable for the width and height for each cell.
 
+            // For-loop that creates a new image control with 25 pixels and height.
             for (int r = 0; r < grid.Rows; r++)
             {
                 for (int c = 0; c < grid.Columns; c++)
@@ -88,6 +89,7 @@ namespace Tetris
                         Height = cellSize,
                     };
 
+                    // The "- 2" pushes the top two rows up so they're not in the canvas.
                     Canvas.SetTop(imageControl, (r - 2) * cellSize + 10);
                     Canvas.SetLeft(imageControl, c * cellSize);
                     GameCanvas.Children.Add(imageControl);
@@ -99,9 +101,9 @@ namespace Tetris
         }
 
         /// <summary>
-        /// 
+        /// The game grid which loops through to get the stored ID and sets the source of the image for the position.
         /// </summary>
-        /// <param name="grid"></param>
+        /// <param name="grid">Returns the image.</param>
         private void DrawGrid(GameGrid grid)
         {
             for (int r = 0; r < grid.Rows; r++)
@@ -115,6 +117,10 @@ namespace Tetris
             }
         }
 
+        /// <summary>
+        /// Method to draw the current block that updates the image sources.
+        /// </summary>
+        /// <param name="block">Returns the current block.</param>
         private void DrawBlock(Block block)
         {
             foreach (Position p in block.TilePositions())
@@ -124,12 +130,20 @@ namespace Tetris
             }
         }
 
+        /// <summary>
+        /// Method to preview the next block.
+        /// </summary>
+        /// <param name="blockQueue">Previews the next block is the queue.</param>
         private void DrawNextBlock(BlockQueue blockQueue)
         {
             Block next = blockQueue.NextBlock;
             NextImage.Source = blockImages[next.Id];
         }
 
+        /// <summary>
+        /// Method that shows the held block.
+        /// </summary>
+        /// <param name="heldBlock">Returns the held block.</param>
         private void DrawHeldBlock(Block heldBlock)
         {
             if (heldBlock == null)
@@ -142,6 +156,10 @@ namespace Tetris
             }
         }
 
+        /// <summary>
+        /// Method that ghost-marks where the block will land at the bottom.
+        /// </summary>
+        /// <param name="block">Returns the ghost image where the block will land.</param>
         private void DrawGhostBlock(Block block)
         {
             int dropDistance = gameState.BlockDropDistance();
@@ -153,6 +171,10 @@ namespace Tetris
             }
         }
 
+        /// <summary>
+        /// Method that draws the current grid and current block.
+        /// </summary>
+        /// <param name="gameState">Returns the current block.</param>
         private void Draw(GameState gameState)
         {
             DrawGrid(gameState.GameGrid);
@@ -163,6 +185,10 @@ namespace Tetris
             ScoreText.Text = $"Score: {gameState.Score}";
         }
 
+        /// <summary>
+        /// Method that returns the next block moving down by itself at an increasing rate as the score increases.
+        /// </summary>
+        /// <returns>Returns the moving block.</returns>
         private async Task GameLoop()
         {
             Draw(gameState);
@@ -179,6 +205,11 @@ namespace Tetris
             FinalScoreText.Text = $"Score: {gameState.Score}";
         }
 
+        /// <summary>
+        /// Method to detect keyboard functions.
+        /// </summary>
+        /// <param name="sender">Arrow key pressed.</param>
+        /// <param name="e">Returns the arrow key movement.</param>
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (gameState.GameOver)
@@ -216,11 +247,19 @@ namespace Tetris
             Draw(gameState);
         }
 
+        /// <summary>
+        /// Calls the GameLoop method when the game Canvas has loaded.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void GameCanvas_Loaded(object sender, RoutedEventArgs e)
         {
             await GameLoop();
         }
 
+        /// <summary>
+        /// Method to set the ability to click "Play Again" to restart the game loop.
+        /// </summary>
         private async void PlayAgain_Click(object sender, RoutedEventArgs e)
         {
             gameState = new GameState();
