@@ -5,7 +5,7 @@
     /// </summary>
     public class GameState
     {
-        private Block currentBlock;
+        private Block currentBlock = null!;
 
         /// <summary>
         /// When the current block is updated, the reset method is called to set the correct stop position and rotation.
@@ -37,7 +37,7 @@
         public BlockQueue BlockQueue { get; }
         public bool GameOver { get; private set; }
         public int Score { get; private set; }
-        public Block HeldBlock { get; private set; }
+        public Block HeldBlock { get; private set; } = null!;
         public bool CanHold { get; private set; }
 
         /// <summary>
