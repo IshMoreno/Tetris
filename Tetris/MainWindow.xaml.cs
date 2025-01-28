@@ -73,12 +73,11 @@ namespace Tetris
         /// </summary>
         /// <param name="grid">The playing grid.</param>
         /// <returns>Returns the image.</returns>
-        private Image[,] SetupGameCanvas(GameState grid)
+        private Image[,] SetupGameCanvas(GameGrid grid)
         {
-            Image[] imageControls = new Image[grid.Rows, grid.Columns];
-            int cellSize = 25; // Variable for the width and height for each cell.
+            Image[,] imageControls = new Image[grid.Rows, grid.Columns];
+            int cellSize = 25; // Width and height for each cell.
 
-            // For-loop that creates a new image control with 25 pixels and height.
             for (int r = 0; r < grid.Rows; r++)
             {
                 for (int c = 0; c < grid.Columns; c++)
