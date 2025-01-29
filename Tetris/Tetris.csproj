@@ -31,24 +31,60 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\Block-Empty.png" />
-    <Resource Include="Assets\Block-I.png" />
-    <Resource Include="Assets\Block-J.png" />
-    <Resource Include="Assets\Block-L.png" />
-    <Resource Include="Assets\Block-O.png" />
-    <Resource Include="Assets\Block-S.png" />
-    <Resource Include="Assets\Block-T.png" />
-    <Resource Include="Assets\Block-Z.png" />
-    <Resource Include="Assets\BlueBackground.png" />
-    <Resource Include="Assets\Icon.ico" />
-    <Resource Include="Assets\TileBlue.png" />
-    <Resource Include="Assets\TileCyan.png" />
-    <Resource Include="Assets\TileEmpty.png" />
-    <Resource Include="Assets\TileGreen.png" />
-    <Resource Include="Assets\TileOrange.png" />
-    <Resource Include="Assets\TilePurple.png" />
-    <Resource Include="Assets\TileRed.png" />
-    <Resource Include="Assets\TileYellow.png" />
+    <Resource Include="Assets\Block-Empty.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Block-I.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Block-J.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Block-L.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Block-O.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Block-S.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Block-T.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Block-Z.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\BlueBackground.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icon.ico">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\TileBlue.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\TileCyan.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\TileEmpty.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\TileGreen.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\TileOrange.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\TilePurple.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\TileRed.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\TileYellow.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
