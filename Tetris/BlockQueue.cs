@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Tetris
+﻿namespace Tetris
 {
     /// <summary>
     /// This class contains an instance of all the block classes.
