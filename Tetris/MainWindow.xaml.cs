@@ -185,18 +185,25 @@ namespace Tetris
         /// <returns>Returns the moving block.</returns>
         private async Task GameLoop()
         {
-            Draw(gameState);
-
-            while (!gameState.GameOver)
+            try
             {
-                int delay = Math.Max(minDelay, maxDelay - (gameState.Score * delayDecrease));
-                await Task.Delay(delay);
-                gameState.MoveBlockDown();
                 Draw(gameState);
-            }
 
-            GameOverMenu.Visibility = Visibility.Visible;
-            FinalScoreText.Text = $"Score: {gameState.Score}";
+                while (!gameState.GameOver)
+                {
+                    int delay = Math.Max(minDelay, maxDelay - (gameState.Score * delayDecrease));
+                    await Task.Delay(delay);
+                    gameState.MoveBlockDown();
+                    Draw(gameState);
+                }
+
+                GameOverMenu.Visibility = Visibility.Visible;
+                FinalScoreText.Text = $"Score: {gameState.Score}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         /// <summary>
