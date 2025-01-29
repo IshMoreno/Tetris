@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Tetris
+﻿namespace Tetris
 {
     /// <summary>
     /// This class represents the blocks of the game for each block.
