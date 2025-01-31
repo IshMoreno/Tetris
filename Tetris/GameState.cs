@@ -60,7 +60,7 @@
         {
             foreach (Position p in CurrentBlock.TilePositions())
             {
-                if (!GameGrid.IsEmpty(p.Row, p.Column))
+                if (p.Row < 0 || p.Row >= GameGrid.Rows || p.Column < 0 || p.Column >= GameGrid.Columns || !GameGrid.IsEmpty(p.Row, p.Column))
                 {
                     return false;
                 }
