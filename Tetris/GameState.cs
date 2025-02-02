@@ -202,7 +202,7 @@
         {
             int drop = 0;
 
-            while (GameGrid.IsEmpty(p.Row + drop + 1, p.Column))
+            while (p.Row + drop + 1 < GameGrid.Rows && GameGrid.IsEmpty(p.Row + drop + 1, p.Column))
             {
                 drop++;
             }
