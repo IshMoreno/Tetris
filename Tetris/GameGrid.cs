@@ -1,7 +1,8 @@
 ﻿namespace Tetris
-{/// <summary>
-/// This class <see cref="GameGrid Grid"/> holds a two dimensional game grid array, the rows and columns. 
-/// </summary>
+{
+    /// <summary>
+    /// This class <see cref="GameGrid Grid"/> holds a two dimensional game grid array, the rows and columns. 
+    /// </summary>
     public class GameGrid
     {
         private readonly int[,] grid;
